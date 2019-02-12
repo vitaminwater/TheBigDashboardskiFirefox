@@ -13,6 +13,8 @@
 import Vue from 'vue'
 
 const DEFAULT_SETTINGS = {
+  mqtt_server: 'node.local',
+  mqtt_server_port: '1884',
   screen: 1,
   tab1: '',
   tab2: '',

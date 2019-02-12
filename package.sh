@@ -1,3 +1,4 @@
 #!/bin/bash
 
-zip -r --exclude=*node_modules* --exclude=*src* TheBigDashboardski.zip .
+rm TheBigDashboardski.zip
+zip -r --exclude=*.git* --exclude=*node_modules* --exclude=*src* TheBigDashboardski.zip .
