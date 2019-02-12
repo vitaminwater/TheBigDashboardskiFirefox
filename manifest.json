@@ -1,0 +1,43 @@
+{
+
+  "manifest_version": 2,
+  "name": "TheBigDashboardski",
+  "version": "1.0",
+
+  "description": "All work and no play makes Jack a dull boy.",
+
+  "icons": {
+    "48": "icons/icon-48.png"
+  },
+
+  "background": {
+    "page": "background.html"
+  },
+
+  "permissions": [
+    "<all_urls>",
+    "tabs",
+    "storage"
+  ],
+
+  "chrome_url_overrides" : {
+    "newtab": "welcome.html"
+  },
+
+  "options_ui": {
+    "page": "settings/dist/index.html"
+  },
+
+  "browser_action": {
+    "default_icon": "icons/icon-32.png",
+    "default_title": "TheBigDashboardski",
+    "default_popup": "settings/dist/index.html"
+  },
+
+  "applications": {
+    "gecko": {
+      "id": "thebigdashboardski@ccsas.biz"
+    }
+  }
+
+}
