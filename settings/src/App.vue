@@ -13,7 +13,7 @@
 import Vue from 'vue'
 
 const DEFAULT_SETTINGS = {
-  screen: 0,
+  screen: 1,
   tab1: '',
   tab2: '',
   tab3: '',
