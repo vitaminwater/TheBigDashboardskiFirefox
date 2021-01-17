@@ -32,12 +32,6 @@
     "default_icon": "icons/icon-32.png",
     "default_title": "TheBigDashboardski",
     "default_popup": "settings/dist/index.html"
-  },
-
-  "applications": {
-    "gecko": {
-      "id": "thebigdashboardski@ccsas.biz"
-    }
   }
 
 }

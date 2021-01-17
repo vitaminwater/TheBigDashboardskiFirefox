@@ -22,6 +22,22 @@ const DEFAULT_SETTINGS = {
   tab4: '',
 }
 
+async function get(keys) {
+  return await new Promise(r => chrome.storage.local.get(keys, r))
+}
+
+async function set(keys) {
+  return await new Promise(r => chrome.storage.local.set(keys, r))
+}
+
+async function query(params) {
+  return await new Promise(r => chrome.tabs.query(params, r))
+}
+
+async function executeScript(tabId, details) {
+  return await new Promise(r => chrome.tabs.executeScript(id, details))
+}
+
 export default {
   data() {
     return {
@@ -30,7 +46,7 @@ export default {
     }
   },
   async mounted() {
-    const stored = await browser.storage.local.get(Object.keys(DEFAULT_SETTINGS))
+    const stored = await get(Object.keys(DEFAULT_SETTINGS))
     Object.keys(DEFAULT_SETTINGS).forEach((k) => {
       this.$set(this.settings, k, stored[k] || DEFAULT_SETTINGS[k])
     })
@@ -44,7 +60,7 @@ export default {
         console.log(this.settings[k])
         store[k] = this.settings[k]
       })
-      await browser.storage.local.set(store);
+      await set(store);
     }
   }
 }
